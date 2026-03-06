@@ -34,11 +34,26 @@ AI video generators like Sora, Runway, and Grok can create impressive videos, bu
 
 ### Our Solution
 Use **Cosmos-Reason2** (a multimodal vision-language model) to:
+
+**Part 1: Detect & Visualize Violations**
 1. **Score** each video on a 5-point physics plausibility scale
 2. **Identify** videos with physics violations (score ≤ 2)
 3. **Extract frames** from violation videos at key moments
 4. **Annotate frames** with red borders and violation descriptions
 5. **Generate** an interactive HTML gallery showing violations visually
+
+**Part 2: Clean & Improve Videos**
+6. **Split** violation videos into segments
+7. **Score each segment** using Cosmos-Reason2-8B
+8. **Remove bad segments** (score ≤ 2.0)
+9. **Reassemble** good segments into cleaned videos
+10. **Output training-ready data** — Videos without physics violations
+
+### Impact
+✅ **Detect** physics violations in AI-generated videos
+✅ **Visualize** violations with annotated frames
+✅ **Clean** videos for high-quality training data
+✅ **Enable** quality control for synthetic media production
 
 ---
 
