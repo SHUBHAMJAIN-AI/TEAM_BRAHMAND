@@ -45,8 +45,11 @@ physics_demo_output/local_videos_demo.html
 # External cloned repos (have their own .git)
 cookbook/
 
+# Shubham baseline (not part of main project)
+Shubham/
+
 # Junk files from bad pip installs
-Shubham/=*
+=*
 
 # System and tool directories
 .cache/
