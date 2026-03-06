@@ -82,6 +82,28 @@ open physics_demo_output/demo.html
 open physics_demo_output/demo_local_videos.html
 ```
 
+### 3. Explore the Output Folder
+All results are pre-computed and ready to view:
+
+```
+physics_demo_output/
+├── demo.html                              # Summary report: 3,397 videos analyzed, 117 violations detected
+├── local_videos_demo.html                 # 15 annotated violation frames from Grok videos
+├── results/
+│   ├── results_combined.json              # Full dataset: physics scores, reasoning, and metrics
+│   └── summary.json                       # Key metrics: 35.4% accuracy, 0.322 Pearson correlation
+├── local_frames/                          # 15 extracted frame images with red violation markers
+└── cleaned/                               # Video cleaning pipeline outputs
+    ├── cleaned_grok-video-*.mp4           # Example cleaned video (violation segment removed)
+    └── cleaning_report_*.json             # Before/after metrics showing segment removal
+```
+
+**Key Output Files:**
+- **demo.html** — Start here. Shows summary statistics, score distribution, and violation gallery
+- **results_combined.json** — Raw data: 3,397 results with physics scores (1-5) and Cosmos-Reason2 reasoning
+- **cleaned_video.mp4** — Cleaned video output after removing violation segments
+- **cleaning_report.json** — Metrics showing original duration, segments removed, cleaned duration
+
 ---
 
 ## 🏗️ Architecture
@@ -143,19 +165,24 @@ HTML Gallery with Embedded Images
 ├── verify_demo.py                         # Verification/checks script
 ├── RUN_DEMO.sh                            # Shell script entrypoint
 │
-├── physics_demo_output/
-│   ├── demo.html                          # Main HTML report
+├── physics_demo_output/                    # Pre-computed results & outputs
+│   ├── demo.html                          # Main HTML report (3,397 videos, 117 violations)
+│   ├── local_videos_demo.html             # Grok videos with extracted annotated frames
 │   ├── results/
-│   │   ├── results_combined.json          # All 3,397 inference results
-│   │   └── summary.json                   # Performance metrics
-│   └── local_frames/                      # 30 annotated frame images
+│   │   ├── results_combined.json          # All 3,397 inference results with reasoning
+│   │   └── summary.json                   # Performance metrics (35.4% accuracy, 0.322 correlation)
+│   ├── local_frames/                      # 15 extracted & annotated violation frames (JPG)
+│   └── cleaned/                           # Cleaned video outputs
+│       ├── cleaned_grok-video-*.mp4       # Video with violation segments removed
+│       └── cleaning_report_*.json         # Before/after metrics for cleaning
 │
-├── Shubham/                               # Team baseline notebooks
-│   ├── sigma_jamba_baseline_benchmarks_FIXED_1 (1).ipynb
-│   └── sigma_jamba_baseline_benchmarks_v2_FIXED.ipynb
+├── Sakib/syntheticVideos/                 # Demo assets
+│   └── grok-video-*.mp4                   # 21 Grok-generated synthetic videos (63.7 MB)
 │
 ├── HACKATHON_DEMO_README.md               # Full technical documentation
 ├── SUBMISSION_SUMMARY.md                  # Executive summary
+├── DEMO_VIDEO_SCRIPT.md                   # 2-minute demo video script with recording tips
+├── CLAUDE.md                               # Developer guide for future work
 ├── FINAL_SUBMISSION_GUIDE.md              # Submission guide
 ├── QUICK_REFERENCE.md                     # Command reference
 ├── DEMO_QUICK_START.txt                   # Quick start guide
