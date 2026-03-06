@@ -34,10 +34,10 @@ ENV/
 env.bak/
 venv.bak/
 
-# Videos (large binaries — avoid git)
-*.mp4
-Sakib/syntheticVideos/
-physics_demo_output/cleaned/
+# Videos (large binaries — avoid git), except project demo videos
+# *.mp4  # COMMENTED OUT: Allowing Grok demo videos and cleaned videos in repo
+# Sakib/syntheticVideos/  # INCLUDED: Demo Grok videos
+# physics_demo_output/cleaned/  # INCLUDED: Cleaned demo videos
 
 # Large generated HTML
 physics_demo_output/local_videos_demo.html

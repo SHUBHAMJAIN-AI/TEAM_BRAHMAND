@@ -1,0 +1,30 @@
+{
+  "original": {
+    "path": "/home/team/Sakib/syntheticVideos/grok-video-0d58534b-c259-443a-bb9a-d77c0da767b6.mp4",
+    "duration": 6.042,
+    "frames": 145,
+    "size_mb": 9.075277328491211
+  },
+  "cleaned": {
+    "path": "/home/team/physics_demo_output/cleaned/cleaned_grok-video-0d58534b-c259-443a-bb9a-d77c0da767b6.mp4",
+    "duration": 8.167,
+    "frames": 171,
+    "size_mb": 14.349967002868652
+  },
+  "improvement": {
+    "duration_removed_s": -2.125,
+    "duration_removed_pct": -35.17047335319431,
+    "frames_removed": -26,
+    "size_reduction_mb": -5.274689674377441
+  },
+  "segments": {
+    "total": 3,
+    "kept": 2,
+    "removed": 1,
+    "scores": [
+      1.734432815664218,
+      3.597366092038598,
+      3.534550375314846
+    ]
+  }
+}
